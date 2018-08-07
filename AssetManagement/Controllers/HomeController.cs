@@ -10,6 +10,7 @@ namespace AssetManagement.Controllers
 {
     public class HomeController : Controller
     {
+        //yh
         public IActionResult Index()
         {
             return View();

@@ -1,0 +1,39 @@
+﻿@model AssetManagement.Models.AssetList.AssetIndexModel
+@*@{
+    ViewBag.Title = "Asset List";
+  }
+
+  <h1>@ViewBag.Title</h1>*@
+
+<div id="assets">
+  <h3>Assets List</h3>
+  <div id="assetTable">
+    <table class="table table-condensed" id="assetIndexTable">
+      <thead>
+        <tr>
+          <th>SerialNumber</th>
+          <th>AssetName</th>
+          <th>AssetDescription</th>
+          <th>PurchasePrice</th>
+          <th>AssetModel</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach (var asset in Model.Assets)
+        {
+          <tr class="assetRow">
+            <td class="">@asset.SerialNumber</td>
+            <td class="">
+              <a asp-controller="Assets" asp-action="Detail" asp-route-id="@asset.Id">
+                @asset.AssetName
+              </a>
+            </td>
+            <td class="">@asset.AssetDescription</td>
+            <td class="">@asset.PurchasePrice</td>
+            <td class="">@asset.AssetModel</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
