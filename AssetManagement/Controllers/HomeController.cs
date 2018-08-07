@@ -27,7 +27,7 @@ namespace AssetManagement.Controllers
         {
             ViewData["Message"] = "Your contact page.";
 
-            return View();
+            return View();//nh
         }
 
         public IActionResult Error()
