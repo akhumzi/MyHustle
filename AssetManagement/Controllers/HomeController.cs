@@ -9,8 +9,7 @@ using AssetManagement.Models;
 namespace AssetManagement.Controllers
 {
     public class HomeController : Controller
-    {
-        //yh
+    { 
         public IActionResult Index()
         {
             return View();
@@ -27,7 +26,7 @@ namespace AssetManagement.Controllers
         {
             ViewData["Message"] = "Your contact page.";
 
-            return View();//nh
+            return View();
         }
 
         public IActionResult Error()
